@@ -34,6 +34,7 @@ import com.mapbox.android.gestures.MoveGestureDetector;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 import com.mapbox.api.directions.v5.models.Bearing;
 import com.mapbox.api.directions.v5.models.RouteOptions;
+import com.mapbox.api.directions.v5.models.VoiceInstructions;
 import com.mapbox.bindgen.Expected;
 import com.mapbox.geojson.Point;
 import com.mapbox.maps.CameraOptions;
@@ -63,6 +64,7 @@ import com.mapbox.navigation.core.directions.session.RoutesUpdatedResult;
 import com.mapbox.navigation.core.lifecycle.MapboxNavigationApp;
 import com.mapbox.navigation.core.trip.session.LocationMatcherResult;
 import com.mapbox.navigation.core.trip.session.LocationObserver;
+import com.mapbox.navigation.core.trip.session.VoiceInstructionsObserver;
 import com.mapbox.navigation.ui.base.util.MapboxNavigationConsumer;
 import com.mapbox.navigation.ui.maps.location.NavigationLocationProvider;
 import com.mapbox.navigation.ui.maps.route.line.api.MapboxRouteLineApi;
@@ -71,9 +73,17 @@ import com.mapbox.navigation.ui.maps.route.line.model.MapboxRouteLineOptions;
 import com.mapbox.navigation.ui.maps.route.line.model.RouteLineError;
 import com.mapbox.navigation.ui.maps.route.line.model.RouteLineResources;
 import com.mapbox.navigation.ui.maps.route.line.model.RouteSetValue;
+import com.mapbox.navigation.ui.voice.api.MapboxSpeechApi;
+import com.mapbox.navigation.ui.voice.api.MapboxVoiceInstructionsPlayer;
+import com.mapbox.navigation.ui.voice.model.SpeechAnnouncement;
+import com.mapbox.navigation.ui.voice.model.SpeechError;
+import com.mapbox.navigation.ui.voice.model.SpeechValue;
+import com.mapbox.navigation.ui.voice.model.SpeechVolume;
+import com.mapbox.navigation.ui.voice.view.MapboxSoundButton;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import kotlin.Unit;
@@ -150,6 +160,48 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     });
+
+    private MapboxSpeechApi speechApi;
+    private MapboxVoiceInstructionsPlayer mapboxVoiceInstructionsPlayer;
+    private MapboxNavigationConsumer<Expected<SpeechError, SpeechValue>> speechCallback = new MapboxNavigationConsumer<Expected<SpeechError, SpeechValue>>() {
+        @Override
+        public void accept(Expected<SpeechError, SpeechValue> expected) {
+            expected.fold(
+                    new Expected.Transformer<SpeechError, Unit>() {
+                        @NonNull
+                        @Override
+                        public Unit invoke(@NonNull SpeechError error) {
+                            mapboxVoiceInstructionsPlayer.play(error.getFallback(), voiceInstructionsPlayerCallback);
+                            return Unit.INSTANCE;
+                        }
+                    },
+                    new Expected.Transformer<SpeechValue, Unit>() {
+                        @NonNull
+                        @Override
+                        public Unit invoke(@NonNull SpeechValue value) {
+                            mapboxVoiceInstructionsPlayer.play(value.getAnnouncement(), voiceInstructionsPlayerCallback);
+                            return Unit.INSTANCE;
+                        }
+                    }
+            );
+        }
+    };
+
+    private MapboxNavigationConsumer<SpeechAnnouncement> voiceInstructionsPlayerCallback = new MapboxNavigationConsumer<SpeechAnnouncement>() {
+        @Override
+        public void accept(SpeechAnnouncement value) {
+            speechApi.clean(value);
+        }
+    };
+
+    VoiceInstructionsObserver voiceInstructionsObserver = new VoiceInstructionsObserver() {
+        @Override
+        public void onNewVoiceInstructions(VoiceInstructions voiceInstructions) {
+            speechApi.generate(voiceInstructions, speechCallback);
+        }
+    };
+    private boolean isVoiceInstructionsMuted = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -158,6 +210,9 @@ public class MainActivity extends AppCompatActivity {
         mapView = findViewById(R.id.mapView);
         focusLocationBtn = findViewById(R.id.focusLocation);
         setRoute = findViewById(R.id.setRoute);
+
+        speechApi = new MapboxSpeechApi(MainActivity.this, getString(R.string.mapbox_access_token), Locale.US.toLanguageTag());
+        mapboxVoiceInstructionsPlayer = new MapboxVoiceInstructionsPlayer(MainActivity.this, Locale.US.toLanguageTag());
 
         MapboxRouteLineOptions options = new MapboxRouteLineOptions.Builder(this).withRouteLineResources(new RouteLineResources.Builder().build())
                 .withRouteLineBelowLayerId(LocationComponentConstants.LOCATION_INDICATOR_LAYER).build();
@@ -171,6 +226,23 @@ public class MainActivity extends AppCompatActivity {
 
         mapboxNavigation.registerRoutesObserver(routesObserver);
         mapboxNavigation.registerLocationObserver(locationObserver);
+        mapboxNavigation.registerVoiceInstructionsObserver(voiceInstructionsObserver);
+
+        MapboxSoundButton soundButton = findViewById(R.id.soundButton);
+        soundButton.unmute();
+        soundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isVoiceInstructionsMuted = !isVoiceInstructionsMuted;
+                if (isVoiceInstructionsMuted) {
+                    soundButton.muteAndExtend(1500L);
+                    mapboxVoiceInstructionsPlayer.volume(new SpeechVolume(0f));
+                } else {
+                    soundButton.unmuteAndExtend(1500L);
+                    mapboxVoiceInstructionsPlayer.volume(new SpeechVolume(1f));
+                }
+            }
+        });
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
