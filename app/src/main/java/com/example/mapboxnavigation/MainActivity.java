@@ -6,13 +6,6 @@ import static com.mapbox.maps.plugin.gestures.GesturesUtils.getGestures;
 import static com.mapbox.maps.plugin.locationcomponent.LocationComponentUtils.getLocationComponent;
 import static com.mapbox.navigation.base.extensions.RouteOptionsExtensions.applyDefaultNavigationOptions;
 
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
@@ -23,6 +16,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -163,43 +163,42 @@ public class MainActivity extends AppCompatActivity {
 
     private MapboxSpeechApi speechApi;
     private MapboxVoiceInstructionsPlayer mapboxVoiceInstructionsPlayer;
+
     private MapboxNavigationConsumer<Expected<SpeechError, SpeechValue>> speechCallback = new MapboxNavigationConsumer<Expected<SpeechError, SpeechValue>>() {
         @Override
-        public void accept(Expected<SpeechError, SpeechValue> expected) {
-            expected.fold(
-                    new Expected.Transformer<SpeechError, Unit>() {
-                        @NonNull
-                        @Override
-                        public Unit invoke(@NonNull SpeechError error) {
-                            mapboxVoiceInstructionsPlayer.play(error.getFallback(), voiceInstructionsPlayerCallback);
-                            return Unit.INSTANCE;
-                        }
-                    },
-                    new Expected.Transformer<SpeechValue, Unit>() {
-                        @NonNull
-                        @Override
-                        public Unit invoke(@NonNull SpeechValue value) {
-                            mapboxVoiceInstructionsPlayer.play(value.getAnnouncement(), voiceInstructionsPlayerCallback);
-                            return Unit.INSTANCE;
-                        }
-                    }
-            );
+        public void accept(Expected<SpeechError, SpeechValue> speechErrorSpeechValueExpected) {
+            speechErrorSpeechValueExpected.fold(new Expected.Transformer<SpeechError, Unit>() {
+                @NonNull
+                @Override
+                public Unit invoke(@NonNull SpeechError input) {
+                    mapboxVoiceInstructionsPlayer.play(input.getFallback(), voiceInstructionsPlayerCallback);
+                    return Unit.INSTANCE;
+                }
+            }, new Expected.Transformer<SpeechValue, Unit>() {
+                @NonNull
+                @Override
+                public Unit invoke(@NonNull SpeechValue input) {
+                    mapboxVoiceInstructionsPlayer.play(input.getAnnouncement(), voiceInstructionsPlayerCallback);
+                    return Unit.INSTANCE;
+                }
+            });
         }
     };
 
     private MapboxNavigationConsumer<SpeechAnnouncement> voiceInstructionsPlayerCallback = new MapboxNavigationConsumer<SpeechAnnouncement>() {
         @Override
-        public void accept(SpeechAnnouncement value) {
-            speechApi.clean(value);
+        public void accept(SpeechAnnouncement speechAnnouncement) {
+            speechApi.clean(speechAnnouncement);
         }
     };
 
     VoiceInstructionsObserver voiceInstructionsObserver = new VoiceInstructionsObserver() {
         @Override
-        public void onNewVoiceInstructions(VoiceInstructions voiceInstructions) {
+        public void onNewVoiceInstructions(@NonNull VoiceInstructions voiceInstructions) {
             speechApi.generate(voiceInstructions, speechCallback);
         }
     };
+
     private boolean isVoiceInstructionsMuted = false;
 
     @Override
@@ -211,13 +210,13 @@ public class MainActivity extends AppCompatActivity {
         focusLocationBtn = findViewById(R.id.focusLocation);
         setRoute = findViewById(R.id.setRoute);
 
-        speechApi = new MapboxSpeechApi(MainActivity.this, getString(R.string.mapbox_access_token), Locale.US.toLanguageTag());
-        mapboxVoiceInstructionsPlayer = new MapboxVoiceInstructionsPlayer(MainActivity.this, Locale.US.toLanguageTag());
-
         MapboxRouteLineOptions options = new MapboxRouteLineOptions.Builder(this).withRouteLineResources(new RouteLineResources.Builder().build())
                 .withRouteLineBelowLayerId(LocationComponentConstants.LOCATION_INDICATOR_LAYER).build();
         routeLineView = new MapboxRouteLineView(options);
         routeLineApi = new MapboxRouteLineApi(options);
+
+        speechApi = new MapboxSpeechApi(MainActivity.this, getString(R.string.mapbox_access_token), Locale.US.toLanguageTag());
+        mapboxVoiceInstructionsPlayer = new MapboxVoiceInstructionsPlayer(MainActivity.this, Locale.US.toLanguageTag());
 
         NavigationOptions navigationOptions = new NavigationOptions.Builder(this).accessToken(getString(R.string.mapbox_access_token)).build();
 
