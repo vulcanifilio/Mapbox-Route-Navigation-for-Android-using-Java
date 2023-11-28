@@ -20,6 +20,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue "string", "mapboxDownloadsToken", project.hasProperty("MAPBOX_DOWNLOADS_TOKEN") ? project.MAPBOX_DOWNLOADS_TOKEN : ""
         }
     }
     compileOptions {
@@ -37,4 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.mapbox.navigation:android:2.15.2'
+
+    implementation 'com.mapbox.maps:android:10.14.1'
 }

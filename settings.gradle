@@ -9,6 +9,7 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
+        jcenter()
         mavenCentral()
         maven {
             url 'https://api.mapbox.com/downloads/v2/releases/maven'
@@ -25,6 +26,7 @@ dependencyResolutionManagement {
         }
     }
 }
+
 
 rootProject.name = "Mapbox Navigation"
 include ':app'

@@ -1,0 +1,140 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.mapboxnavigation.app-mergeDebugResources-57:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/junnbesana/.gradle/caches/transforms-3/a47d6d13e39ec91ea7ed81f8d7788f97/transformed/ui-maneuver-2.15.2/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,141,226,313,395,487,575,648,712",
+                        "endColumns": "85,84,86,81,91,87,72,63,96",
+                        "endOffsets": "136,221,308,390,482,570,643,707,804"
+                    },
+                    "to": {
+                        "startLines": "15,16,19,26,27,28,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "726,812,1061,1597,1679,1771,2097,2170,2234",
+                        "endColumns": "85,84,86,81,91,87,72,63,96",
+                        "endOffsets": "807,892,1143,1674,1766,1854,2165,2229,2326"
+                    }
+                },
+                {
+                    "source": "/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/res/values-night/themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "323"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "2331",
+                        "endLines": "38",
+                        "endColumns": "12",
+                        "endOffsets": "2450"
+                    }
+                },
+                {
+                    "source": "/Users/junnbesana/.gradle/caches/transforms-3/736794751e96efce6afa16ec1eb1d175/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "39,40,41,42,43,44,45,71",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "2455,2525,2609,2693,2789,2891,2993,5848",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "2520,2604,2688,2784,2886,2988,3082,5932"
+                    }
+                },
+                {
+                    "source": "/Users/junnbesana/.gradle/caches/transforms-3/abf19f7240cc5d80ac76f62297e6f239/transformed/ui-tripprogress-2.15.2/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,124,204",
+                        "endColumns": "68,79,88",
+                        "endOffsets": "119,199,288"
+                    },
+                    "to": {
+                        "startLines": "29,30,31",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1859,1928,2008",
+                        "endColumns": "68,79,88",
+                        "endOffsets": "1923,2003,2092"
+                    }
+                },
+                {
+                    "source": "/Users/junnbesana/.gradle/caches/transforms-3/c8ada2024ccf4a824d2a13271cb1d235/transformed/ui-speedlimit-2.15.2/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,116,185,250,328,409,493",
+                        "endColumns": "60,68,64,77,80,83,71",
+                        "endOffsets": "111,180,245,323,404,488,560"
+                    },
+                    "to": {
+                        "startLines": "14,20,21,22,23,24,25",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "665,1148,1217,1282,1360,1441,1525",
+                        "endColumns": "60,68,64,77,80,83,71",
+                        "endOffsets": "721,1212,1277,1355,1436,1520,1592"
+                    }
+                },
+                {
+                    "source": "/Users/junnbesana/.gradle/caches/transforms-3/1baf75ee4ebd260f0cacd5c977a2ca4b/transformed/material-1.9.0/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,130,241,330,431,538,645,744,851,954,1042,1166,1268,1370,1486,1588,1702,1830,1946,2068,2204,2324,2458,2578,2690,2816,2933,3057,3187,3309,3447,3581,3697",
+                        "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
+                        "endOffsets": "125,236,325,426,533,640,739,846,949,1037,1161,1263,1365,1481,1583,1697,1825,1941,2063,2199,2319,2453,2573,2685,2811,2928,3052,3182,3304,3442,3576,3692,3812"
+                    },
+                    "to": {
+                        "startLines": "46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,72,73,74,75,76,77,78,79",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3087,3162,3273,3362,3463,3570,3677,3776,3883,3986,4074,4198,4300,4402,4518,4620,4734,4862,4978,5100,5236,5356,5490,5610,5722,5937,6054,6178,6308,6430,6568,6702,6818",
+                        "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
+                        "endOffsets": "3157,3268,3357,3458,3565,3672,3771,3878,3981,4069,4193,4295,4397,4513,4615,4729,4857,4973,5095,5231,5351,5485,5605,5717,5843,6049,6173,6303,6425,6563,6697,6813,6933"
+                    }
+                },
+                {
+                    "source": "/Users/junnbesana/.gradle/caches/transforms-3/acf948dbb3b19d07bd0b5b623bc72a8f/transformed/ui-maps-2.15.2/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,134",
+                        "endColumns": "78,84",
+                        "endOffsets": "129,214"
+                    },
+                    "to": {
+                        "startLines": "17,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "897,976",
+                        "endColumns": "78,84",
+                        "endOffsets": "971,1056"
+                    }
+                },
+                {
+                    "source": "/Users/junnbesana/.gradle/caches/transforms-3/d949822f8c9e56e2b13446fec377a26a/transformed/ui-resources-2.15.2/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,100,147,196,252,303,363,412,459,513,562,618",
+                        "endColumns": "44,46,48,55,50,59,48,46,53,48,55,46",
+                        "endOffsets": "95,142,191,247,298,358,407,454,508,557,613,660"
+                    }
+                }
+            ]
+        }
+    ]
+}

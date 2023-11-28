@@ -1,0 +1,381 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.mapboxnavigation"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:4:5-78
+11-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:4:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:5:5-80
+12-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:5:22-78
+13    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+13-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:6:5-76
+13-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:6:22-74
+14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+14-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:12:5-77
+14-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:12:22-74
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:14:5-67
+15-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:14:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:15:5-79
+16-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:15:22-76
+17    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+17-->[com.mapbox.navigator:mapbox-navigation-native:148.0.2] /Users/junnbesana/.gradle/caches/transforms-3/fc6f6cc30920faf9f32b977c77573d5e/transformed/mapbox-navigation-native-148.0.2/AndroidManifest.xml:10:5-79
+17-->[com.mapbox.navigator:mapbox-navigation-native:148.0.2] /Users/junnbesana/.gradle/caches/transforms-3/fc6f6cc30920faf9f32b977c77573d5e/transformed/mapbox-navigation-native-148.0.2/AndroidManifest.xml:10:22-76
+18
+19    <uses-feature
+19-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:10:5-12:35
+20        android:glEsVersion="0x00020000"
+20-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:11:9-41
+21        android:required="true" />
+21-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:12:9-32
+22    <uses-feature
+22-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:13:5-15:36
+23        android:name="android.hardware.wifi"
+23-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:14:9-45
+24        android:required="false" />
+24-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:15:9-33
+25
+26    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+26-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:19:5-76
+26-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:19:22-73
+27    <uses-permission android:name="android.permission.WAKE_LOCK" />
+27-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
+27-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:22-65
+28    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+28-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:5-81
+28-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:27:22-78
+29
+30    <permission
+30-->[androidx.core:core:1.9.0] /Users/junnbesana/.gradle/caches/transforms-3/36d2bebf921bf3e653b8992b98e79081/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+31        android:name="com.example.mapboxnavigation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.9.0] /Users/junnbesana/.gradle/caches/transforms-3/36d2bebf921bf3e653b8992b98e79081/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.9.0] /Users/junnbesana/.gradle/caches/transforms-3/36d2bebf921bf3e653b8992b98e79081/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="com.example.mapboxnavigation.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.9.0] /Users/junnbesana/.gradle/caches/transforms-3/36d2bebf921bf3e653b8992b98e79081/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.9.0] /Users/junnbesana/.gradle/caches/transforms-3/36d2bebf921bf3e653b8992b98e79081/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+35
+36    <application
+36-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:7:5-26:19
+37        android:allowBackup="true"
+37-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:8:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.9.0] /Users/junnbesana/.gradle/caches/transforms-3/36d2bebf921bf3e653b8992b98e79081/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+39        android:dataExtractionRules="@xml/data_extraction_rules"
+39-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:9:9-65
+40        android:debuggable="true"
+41        android:extractNativeLibs="false"
+42        android:fullBackupContent="@xml/backup_rules"
+42-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:10:9-54
+43        android:icon="@mipmap/ic_launcher"
+43-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:11:9-43
+44        android:label="@string/app_name"
+44-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:12:9-41
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:13:9-54
+46        android:supportsRtl="true"
+46-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:14:9-35
+47        android:testOnly="true"
+48        android:theme="@style/Theme.MapboxNavigation" >
+48-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:15:9-54
+49        <activity
+49-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:17:9-25:20
+50            android:name="com.example.mapboxnavigation.MainActivity"
+50-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:18:13-41
+51            android:exported="true" >
+51-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:19:13-36
+52            <intent-filter>
+52-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:20:13-24:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:21:17-69
+53-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:21:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:23:17-77
+55-->/Users/junnbesana/Documents/GitHub/Mapbox-Route-Navigation-for-Android-using-Java/app/src/main/AndroidManifest.xml:23:27-74
+56            </intent-filter>
+57        </activity>
+58
+59        <provider
+59-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:18:9-26:20
+60            android:name="androidx.startup.InitializationProvider"
+60-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:19:13-67
+61            android:authorities="com.example.mapboxnavigation.androidx-startup"
+61-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:20:13-68
+62            android:exported="false" >
+62-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:21:13-37
+63            <meta-data
+63-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:23:13-25:52
+64                android:name="com.mapbox.navigation.core.internal.MapboxNavigationSDKInitializer"
+64-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:24:17-98
+65                android:value="androidx.startup" />
+65-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:25:17-49
+66            <meta-data
+66-->[androidx.emoji2:emoji2:1.2.0] /Users/junnbesana/.gradle/caches/transforms-3/cb52533986600588c149468d62a185bb/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+67-->[androidx.emoji2:emoji2:1.2.0] /Users/junnbesana/.gradle/caches/transforms-3/cb52533986600588c149468d62a185bb/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+68                android:value="androidx.startup" /> <!-- This entry makes MapboxNavigationNativeInitializer discoverable. -->
+68-->[androidx.emoji2:emoji2:1.2.0] /Users/junnbesana/.gradle/caches/transforms-3/cb52533986600588c149468d62a185bb/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+69            <meta-data
+69-->[com.mapbox.navigator:mapbox-navigation-native:148.0.2] /Users/junnbesana/.gradle/caches/transforms-3/fc6f6cc30920faf9f32b977c77573d5e/transformed/mapbox-navigation-native-148.0.2/AndroidManifest.xml:20:13-22:52
+70                android:name="com.mapbox.navigator.MapboxNavigationNativeInitializer"
+70-->[com.mapbox.navigator:mapbox-navigation-native:148.0.2] /Users/junnbesana/.gradle/caches/transforms-3/fc6f6cc30920faf9f32b977c77573d5e/transformed/mapbox-navigation-native-148.0.2/AndroidManifest.xml:21:17-86
+71                android:value="androidx.startup" />
+71-->[com.mapbox.navigator:mapbox-navigation-native:148.0.2] /Users/junnbesana/.gradle/caches/transforms-3/fc6f6cc30920faf9f32b977c77573d5e/transformed/mapbox-navigation-native-148.0.2/AndroidManifest.xml:22:17-49
+72            <meta-data
+72-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:27:13-29:52
+73                android:name="com.mapbox.maps.loader.MapboxMapsInitializer"
+73-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:28:17-76
+74                android:value="androidx.startup" /> <!-- This entry makes MapboxSDKCommonInitializer discoverable. -->
+74-->[com.mapbox.maps:android-core:10.15.0] /Users/junnbesana/.gradle/caches/transforms-3/3425295429a907e8a70ccc634974eb76/transformed/android-core-10.15.0/AndroidManifest.xml:29:17-49
+75            <meta-data
+75-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:21:13-23:52
+76                android:name="com.mapbox.common.MapboxSDKCommonInitializer"
+76-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:22:17-76
+77                android:value="androidx.startup" />
+77-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:23:17-49
+78            <meta-data
+78-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
+79                android:name="androidx.work.WorkManagerInitializer"
+79-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
+80                android:value="androidx.startup" />
+80-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
+81            <meta-data
+81-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/junnbesana/.gradle/caches/transforms-3/1af2e57e16c187592bfddc013f59347b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+82                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+82-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/junnbesana/.gradle/caches/transforms-3/1af2e57e16c187592bfddc013f59347b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+83                android:value="androidx.startup" />
+83-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/junnbesana/.gradle/caches/transforms-3/1af2e57e16c187592bfddc013f59347b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+84        </provider>
+85
+86        <service
+86-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:28:9-30:56
+87            android:name="com.mapbox.navigation.core.trip.service.NavigationNotificationService"
+87-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:29:13-97
+88            android:foregroundServiceType="location" />
+88-->[com.mapbox.navigation:core:2.15.2] /Users/junnbesana/.gradle/caches/transforms-3/2f842d9c80476484b439bace6e9543bd/transformed/core-2.15.2/AndroidManifest.xml:30:13-53
+89
+90        <receiver
+90-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:26:9-33:20
+91            android:name="com.mapbox.common.location.LocationUpdatesReceiver"
+91-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:27:13-78
+92            android:enabled="true"
+92-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:28:13-35
+93            android:exported="false" >
+93-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:29:13-37
+94            <intent-filter>
+94-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:30:13-32:29
+95                <action android:name="com.mapbox.common.location.LocationUpdatesReceiver.ACTION_PROCESS_LOCATION_UPDATES" />
+95-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:31:17-125
+95-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:31:25-122
+96            </intent-filter>
+97        </receiver>
+98
+99        <service
+99-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:35:9-37:40
+100            android:name="com.mapbox.common.LifecycleService"
+100-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:36:13-62
+101            android:exported="false" />
+101-->[com.mapbox.common:common:23.7.0] /Users/junnbesana/.gradle/caches/transforms-3/a883a503203231ba9f324b032280c7e7/transformed/common-23.7.0/AndroidManifest.xml:37:13-37
+102        <service
+102-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+103            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+103-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+104            android:directBootAware="false"
+104-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+105            android:enabled="@bool/enable_system_alarm_service_default"
+105-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+106            android:exported="false" />
+106-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+107        <service
+107-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+108            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+108-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+109            android:directBootAware="false"
+109-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+110            android:enabled="@bool/enable_system_job_service_default"
+110-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+111            android:exported="true"
+111-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+112            android:permission="android.permission.BIND_JOB_SERVICE" />
+112-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+113        <service
+113-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+114            android:name="androidx.work.impl.foreground.SystemForegroundService"
+114-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
+115            android:directBootAware="false"
+115-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+116            android:enabled="@bool/enable_system_foreground_service_default"
+116-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+117            android:exported="false" />
+117-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+118
+119        <receiver
+119-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+120            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+120-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+121            android:directBootAware="false"
+121-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+122            android:enabled="true"
+122-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+123            android:exported="false" />
+123-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+124        <receiver
+124-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+125            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+125-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+126            android:directBootAware="false"
+126-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+127            android:enabled="false"
+127-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+128            android:exported="false" >
+128-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+129            <intent-filter>
+129-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+130                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+130-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+130-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+131                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+131-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+131-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+132            </intent-filter>
+133        </receiver>
+134        <receiver
+134-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+135            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+135-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+136            android:directBootAware="false"
+136-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+137            android:enabled="false"
+137-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+138            android:exported="false" >
+138-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+139            <intent-filter>
+139-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+140                <action android:name="android.intent.action.BATTERY_OKAY" />
+140-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+140-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+141                <action android:name="android.intent.action.BATTERY_LOW" />
+141-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+141-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+142            </intent-filter>
+143        </receiver>
+144        <receiver
+144-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+145            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+145-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+146            android:directBootAware="false"
+146-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+147            android:enabled="false"
+147-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+148            android:exported="false" >
+148-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+149            <intent-filter>
+149-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+150                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+150-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+150-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+151                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+151-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+151-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+152            </intent-filter>
+153        </receiver>
+154        <receiver
+154-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+155            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+155-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+156            android:directBootAware="false"
+156-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+157            android:enabled="false"
+157-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+158            android:exported="false" >
+158-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+159            <intent-filter>
+159-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+160                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+160-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+160-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+161            </intent-filter>
+162        </receiver>
+163        <receiver
+163-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+164            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+164-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+165            android:directBootAware="false"
+165-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+166            android:enabled="false"
+166-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+167            android:exported="false" >
+167-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+168            <intent-filter>
+168-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+169                <action android:name="android.intent.action.BOOT_COMPLETED" />
+169-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:17-79
+169-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:117:25-76
+170                <action android:name="android.intent.action.TIME_SET" />
+170-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+170-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+171                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+171-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+171-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+172            </intent-filter>
+173        </receiver>
+174        <receiver
+174-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+175            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+175-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+176            android:directBootAware="false"
+176-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+177            android:enabled="@bool/enable_system_alarm_service_default"
+177-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+178            android:exported="false" >
+178-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+179            <intent-filter>
+179-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+180                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+180-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+180-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+181            </intent-filter>
+182        </receiver>
+183        <receiver
+183-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+184            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+184-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+185            android:directBootAware="false"
+185-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+186            android:enabled="true"
+186-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+187            android:exported="true"
+187-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+188            android:permission="android.permission.DUMP" >
+188-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+189            <intent-filter>
+189-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+190                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+190-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+190-->[androidx.work:work-runtime:2.7.1] /Users/junnbesana/.gradle/caches/transforms-3/2c229d8d92409cb1612e247275af7221/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+191            </intent-filter>
+192        </receiver>
+193
+194        <service
+194-->[androidx.room:room-runtime:2.2.5] /Users/junnbesana/.gradle/caches/transforms-3/8001f20c28da61a52fb51bae8165ddcb/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+195            android:name="androidx.room.MultiInstanceInvalidationService"
+195-->[androidx.room:room-runtime:2.2.5] /Users/junnbesana/.gradle/caches/transforms-3/8001f20c28da61a52fb51bae8165ddcb/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+196            android:directBootAware="true"
+196-->[androidx.room:room-runtime:2.2.5] /Users/junnbesana/.gradle/caches/transforms-3/8001f20c28da61a52fb51bae8165ddcb/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+197            android:exported="false" />
+197-->[androidx.room:room-runtime:2.2.5] /Users/junnbesana/.gradle/caches/transforms-3/8001f20c28da61a52fb51bae8165ddcb/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+198    </application>
+199
+200</manifest>

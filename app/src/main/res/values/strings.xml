@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Mapbox Navigation</string>
-    <string name="mapbox_access_token">PLACE_YOUR_PUBLIC_KEY_HERE</string>
+    <string name="mapbox_access_token">sk.eyJ1IjoibWVtYXRoZXNpcyIsImEiOiJjbHBoYmJ5NHUwNXExMnJtaGVkbnBlbGVoIn0.UlVd2ByV2fX1_gHIAgp1sQ</string>
 </resources>

@@ -250,9 +250,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-            && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            /*&& ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED*/) {
             activityResultLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
-            activityResultLauncher.launch(Manifest.permission.ACCESS_COARSE_LOCATION);
+//            activityResultLauncher.launch(Manifest.permission.ACCESS_COARSE_LOCATION);
         } else {
             mapboxNavigation.startTripSession();
         }
@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mapView.getMapboxMap().loadStyleUri(Style.SATELLITE, new Style.OnStyleLoaded() {
+        mapView.getMapboxMap().loadStyleUri(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull Style style) {
                 mapView.getMapboxMap().setCamera(new CameraOptions.Builder().zoom(20.0).build());
